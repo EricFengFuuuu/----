@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格-合并单元格</title>
+</head>
+<body>
+    <p>垂直合并:colspan</p>
+    <p>水平合并:rowspan</p>
+    <table border="1" width="500px" height="200px">
+        <tr>
+            <td rowspan="2">垂直合并</td>
+            <td>单元格2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格5</td>
+        </tr>
+        <tr>
+            
+            <td>单元格2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格5</td>
+        </tr>
+        <tr>
+            <td>单元格1</td>
+            <td>单元格2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格5</td>
+        </tr>
+        <tr>
+            <td colspan="2">水平合并</td>
+           
+            <td>单元格3</td>
+            <td colspan="2" rowspan="2">水平合并+垂直合并</td>
+           
+        </tr>
+        <tr>
+            <td>单元格1</td>
+            <td>单元格2</td>
+            <td>单元格3</td>
+           
+        </tr>
+    </table>
+    
+</body>
+</html>
