@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景属性</title>
+
+    <style>
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box2{
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/image.png);
+        }
+
+        .box3{
+            width: 350px;
+            height: 400px;
+
+            background-color: red;
+            background-image: url(./image/image.png);
+            /* 平铺背景 repeat repeat-x repeat-y no-repeat*/
+            background-repeat: no-repeat;
+            /* 设置背景图像大小 
+                直接设置宽和高 Xpx 或 X%
+                保持比例拉伸并完全填充cover 
+                保持比例拉伸并不完全填充contain
+            */
+            background-size: 100px 100px ;
+            /* 设置图片位置 left right top button center  x% y%*/
+            background-position: left center;
+
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+    </div>
+
+    <div class="box2">
+    </div>
+
+    <div class="box3">
+    </div>
+    
+</body>
+</html>

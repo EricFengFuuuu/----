@@ -16,12 +16,36 @@
         font-size: 50px;
     }
 
+    /* class选择器: 可以在多个标签上重复使用*/
+    .classSelect{
+        color: green;
+        font-size: 40px;
+    }
+
+    /* id选择器: 不能在多个标签上重复使用*/
+    #idSelect{
+        color: orchid;
+        font-size: 40px;
+    }
+
+    /* 合并选择器: 提取公共样式, 减少代码*/
+    p,h3{
+        color: blue;
+        font-size: 50px;
+    }
+
+
 </style>
 <body>
 
     <h2>标题</h2>
     <p>段落1</p>
     <p>段落2</p>
+    <p class="classSelect">class选择器</p>
+    <p id="idSelect">id选择器</p>
+
+
+    选择器优先级: 内联样式 > id选择器 > class选择器 > 元素选择器 
     
 </body>
 </html>
