@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS引入方式</title>
+
+     <!-- 外部样式 -->
+     <link rel="stylesheet" href="./外部样式/public.css">
+
+    <!-- 内部样式 -->
+    <style>
+        h1{
+            color: blue;
+        }
+
+        h2{
+            color: blue;
+        }
+
+        h3{
+            color: blue;
+        }
+    </style>
+
+   
+
+</head>
+<body>
+
+
+    优先级: 内联样式>内部样式>外部样式
+
+    <h1>内部样式</h1>
+
+
+    <!-- 内联样式 -->
+    <h2 style="color: red; font-size: 20px;">
+       内联样式
+    </h2>
+
+    <h3>外部样式</h3>
+    
+</body>
+</html>
