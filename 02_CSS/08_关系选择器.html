@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关系选择器</title>
+    <style>
+        /* 后代选择器 :所有子元素*/
+        ul li{
+            color: red;
+        }
+
+        /* 子代选择器: 直接子元素*/
+        div>p{
+            color: orange;
+        }
+
+        /* 相邻兄弟选择器: 向下同层级相邻的第一个元素 */
+        h1+p{
+            color: green;
+        }
+
+        /* 通用兄弟选择器 向下同层级全部元素*/
+        h2~p{
+            color: blue;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <div>
+            <ol>
+                <li>列表1</li>
+                <li>列表2</li>
+            </ol>
+        </div>
+    </ul>
+
+
+    <div>
+        <p>大家好</p>
+        <ul>
+            <p>我很好</p>
+        </ul>
+    </div>
+
+
+    <h1>标题</h1>
+    <p>段落1</p>
+    <p>段落2</p>
+
+
+    <h2>标题</h1>
+    <p>段落1</p>
+    <p>段落2</p>
+    
+</body>
+</html>

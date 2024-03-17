@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子模型</title>
+
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            /* 弹性盒子 开启 */
+            display: flex;
+            /* 定义元素的方位: row水平, row-reverse水平翻转, column垂直, column-reverse垂直翻转 */
+            flex-direction: row;
+         
+
+            /* 定义元素在横轴上的位置, flex-start开始对齐, flex-end结尾对齐, center中间对齐 */
+            justify-content: center;
+
+             /* 定义元素在纵轴上的位置, flex-start开始对齐, flex-end结尾对齐, center中间对齐 */
+             /* align-items: center; */
+        }
+
+        .item1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 权重: */
+            /* flex: 1; */
+        }
+
+        .item2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* flex: 1; */
+        }
+
+        .item3{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* flex: 1; */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+
+    </div>
+    
+</body>
+</html>
