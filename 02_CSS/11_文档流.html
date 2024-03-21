@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>文档流</title>
+
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
 
-    <p>文档流存在的问题:
-        <br>1,
+    <p>文档流存在的问题: 标准流限制较多,导致很多页面效果无法实现
+        <br>1,元素高矮不一时,底边对齐,不美观
+        <br>2,无论多少个空格, 换行, tab,都会折叠成一个
+        <br>3,img 标签之间有间隙
     </p>
+
+
+    <span>问题1:高矮不齐</span>
+    <img src="image/image.png">
+
+    <p>问题2:空格折叠     不齐</p>
+
+
+    <p>问题3:img 标签之间有间隙</p>
+    <img src="image/image.png">
+    <img src="image/image.png">
+
+    
     
 </body>
 </html>

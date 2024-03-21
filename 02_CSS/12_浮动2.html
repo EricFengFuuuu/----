@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动2</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+
+            /* 浮动 left, right*/
+            float: left;
+        }
+
+        .box1 {
+            background-color: red;
+
+        }
+
+        .box2 {
+            background-color: yellow;
+        }
+
+        .box3 {
+            background-color: green;
+        }
+
+        .continal {
+            /* 外层容器宽度不够会自动换行 */
+            width: 250px;
+            height: 300px;
+            background-color: gray;
+        }
+
+        ul li {
+            /* 无序列表横向摆放 */
+            float: left;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>
+        浮动: 脱离文档流的方式之一
+    </p>
+
+    <div class="continal">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+
+
+    <ul>
+        <li><a href="#">导航1</a></li>
+        <li><a href="#">导航2</a></li>
+        <li><a href="#">导航3</a></li>
+    </ul>
+
+
+</body>
+
+</html>
