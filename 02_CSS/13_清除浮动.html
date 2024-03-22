@@ -3,8 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>清除浮动</title>
+    <style>
+        .containar{
+            
+
+            /* 3 overflow清除浮动(常用)*/
+            /* overflow: hidden; */
+
+            /* 1设置父级容器高度, 清除浮动*/
+            /* height: 400px; */
+
+            width: 400px;
+           
+            background-color:blue;
+        }
+        /* 伪对象清除浮动*/
+        .containar::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 5px;
+            /* 浮动导致父级元素高度塌陷 */
+            float: left;
+        }
+
+        /* 后续元素被影响 */
+        .text{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 2clear清除浮动(内部元素) */
+            clear: both;
+
+        }
+
+
+    </style>
 </head>
 <body>
+
+    <P>
+        清除浮动: 解决浮动带来的副作用
+        <br>1, 导致父级元素的高度塌陷
+        <br>2, 后续元素也会受到影响
+    </P>
+
+    <div class="containar">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div  class="text"></div>
+       
+    </div>
+   
+    
     
 </body>
 </html>

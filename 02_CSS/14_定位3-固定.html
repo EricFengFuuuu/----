@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+
+    <style>
+
+   
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            
+            /* 固定定位 脱离文档流,box2 box3的位置变了
+                影响后续元素的位置
+                
+                位置固定,页面滚动位置也不变
+                */
+            position:fixed;
+            right: 100px;
+            bottom: 100px;
+              
+        
+        }
+
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+
+        }
+
+        h3{
+            height: 800px
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+   
+
+    <h3>
+        hahahahhaha
+    </h3>
+
+    
+    <h3>
+        hahahahhaha
+    </h3>
+    
+    <h3>
+        hahahahhaha
+    </h3>
+    
+</body>
+</html>

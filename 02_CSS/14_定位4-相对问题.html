@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对问题</title>
+
+    <style>
+
+        
+
+
+        .container2{
+            width: 400px;
+            height: 400px;
+            background-color:red;
+
+            position:relative;
+            
+              
+        
+        }
+
+        
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+
+            margin: 50px;
+
+            position:relative;
+            
+              
+        
+        }
+
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position:absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        /* 
+            子元素为相对定位, 则相对于父级元素偏移定位()
+            子元素为绝对定位, 则相对于有定位的父级元素偏移定位,
+                父级都没有定位则相对于最外层文档
+        */
+
+      
+    </style>
+
+</head>
+<body>
+    <div class="container2">container2
+        <div class="container">container
+
+            <div class="box">box</div>
+        </div>
+    </div>
+
+   
+
+    
+   

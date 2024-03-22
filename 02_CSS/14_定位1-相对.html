@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+
+    <style>
+
+        
+
+       
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 相对定位 不脱离文档流,box2的位置不变 
+                不会影响后续元素
+                */
+            position:relative;
+
+      
+            /* 左右位置 */
+            left: 50px;
+            top: 50px;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+
+  
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+
+    
+</body>
+</html>
