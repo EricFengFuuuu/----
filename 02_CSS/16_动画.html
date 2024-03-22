@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+
+            border-radius: 100%;
+            background-color: red;
+            /* 动画 名称 */
+            animation: donghua2 3s linear 0s infinite;
+
+
+        }
+
+        div:hover{
+            animation-play-state: paused;
+            /* background-color: orange; */
+        }
+
+
+       
+
+
+        @keyframes donghua2{
+
+            0%{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+
+
+            50%{
+                width: 350px;
+                height: 350px;
+                background-color: blue;
+            }
+
+
+            100%{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+
+
+
+        }
+
+        @keyframes donghua{
+            from{
+
+            }
+
+            to{
+
+            } 
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div>
+
+    </div>
+</body>
+</html>
