@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Sprite</title>
+    <!-- 
+        CSS Sprite也叫CSS精灵图、CSS雪碧图，是一种网页图片应用处理方式。
+        它允许你将一个页面涉及到的所有零星图片都包含到一张大图中去
+     -->
+
+
+     <style>
+        .icon1{
+            display: block;
+            width: 135px;
+            height: 135px;
+            background-image: url("/02_CSS/image/sprite.png");
+            border: 1px solid red;
+            background-position: 0px 0px;
+
+        }
+
+        .icon2{
+            display: block;
+            width: 135px;
+            height: 135px;
+            background-image: url("/02_CSS/image/sprite.png");
+            border: 1px solid red;
+            background-position: 0px 130px;
+
+        }
+
+     </style>
+</head>
+<body>
+
+    <span class="icon1"></span>
+    <span class="icon2"></span>
+    
+    
+</body>
+</html>

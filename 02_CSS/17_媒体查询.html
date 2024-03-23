@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询</title>
+    <!-- 
+        width=device-width 宽度等于设备宽度
+        initial-scale = 1 初始化缩放比例 (默认设置1.0)
+        maximum-scala =1 允许用户缩放的最大比例 (默认设置1.0)
+        user-scalable = no 用户是否可以手动缩放 (默认设置no)
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale = 1,
+                                    maximum-scala =1, user-scalable = no">
+    
+
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 768px) {
+            .box{
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 996px) {
+            .box{
+                background-color: green;
+            }
+        }
+
+        @media screen and (min-width:996px) {
+            .box{
+                background-color: yellow;
+            }
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>
