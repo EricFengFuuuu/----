@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运算符-typeof</title>
+</head>
+<body>
+
+    <script>
+        var name = "张三";
+        var age = 20;
+        var flag = true;
+
+        var user = {};
+
+        
+        //typeof: 判断数据类型, 主要是基本数据类型
+        console.log(typeof name); //number
+        console.log(typeof age); //string
+        console.log(typeof flag); //boolean
+        console.log(typeof user); //object
+
+
+        console.log(typeof []);//object
+
+        console.log(typeof null);//object
+
+        console.log(typeof undefined);//undefined
+
+        /*
+            null一般代表对象为 没有
+            undefined一般代表数字为 没有
+        */
+
+
+
+
+    </script>
+    
+</body>
+</html>
