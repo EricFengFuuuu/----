@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布尔运算符</title>
+</head>
+<body>
+    
+    <script>
+
+        //取反运算符!
+        var flag = true;
+        console.log(flag); //false
+
+        //以下非布尔值取反均为ture, 剩下的都为false
+        console.log(!undefined);//ture
+        console.log(!null);//ture
+        console.log(!false);//ture
+        console.log(!0);//ture
+        console.log(!NaN);//ture
+        console.log(!'');//ture
+
+        //且运算符 && 全部满足为true 否则为false
+        console.log(10 > 5 && 3 < 5); //true
+        console.log(10 > 5 && 3 > 5); //false
+
+
+        //或运算符 || 满足一个为ture 否则为false 
+        console.log(10 > 5 || 3 > 5); //true
+        console.log(10 < 5 || 3 > 5); //false
+
+    </script>
+
+</body>
+</html>
