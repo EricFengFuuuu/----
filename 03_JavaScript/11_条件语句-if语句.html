@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if语句</title>
+</head>
+<body>
+
+    <script>
+
+        var flag = true;
+        
+        //如果flag为ture, 则执行大括号里的代码
+        if(flag){
+            console.log("flag为ture!");
+        }
+
+        
+        var num = 2;
+        //表达式为ture, 则执行大括号里的代码
+        if(num < 10){
+            console.log("num小于10!");
+        }
+
+
+        var x = 10;
+        var y = 20
+        //x=y 是赋值运算, 不能用于if的条件判断
+        if(x=y){
+           console.log(x);
+        }
+        //正常应该用 == 或者 ===
+        if(x==y){
+           console.log(x);
+        }
+
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环</title>
+</head>
+<body>
+
+    <script>
+
+        //打印1-100
+        for(var i=1; i<=100; i++){
+            console.log(i)
+        }
+
+        //死循环
+        // for(;;){
+        //     console.log(1)
+        // }
+
+        //打印1-100的和
+        var sum = 0;
+        for (var i = 0; i <= 100; i++) {
+            sum += i;
+        }
+
+        console.log(sum);
+
+        //打印1-100的奇数
+        for(var i = 0; i<= 100; i++){
+            if(i%2 !=0){
+                console.log(i);
+            }
+        }
+
+        //打印99乘法表
+        for(var i=1; i<=9; i++){
+            document.write("<br>");
+            for(var j=1; j<=i; j++){
+                sum = i*j;
+                document.write(i, "*", j, '=', sum, " ")
+               
+            }
+        }
+
+
+
+
+
+        //forEach循环
+        var array = [1,2,3,4,5];
+
+        array.forEach(element => {
+            console.log(element);
+        });
+
+    </script>
+    
+</body>
+</html>
