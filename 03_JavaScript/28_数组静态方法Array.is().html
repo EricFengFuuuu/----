@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组静态方法</title>
+</head>
+<body>
+    <script>
+
+        var num = 10;
+        console.log(typeof num); //number
+
+        var arr = [1,2,3];
+        console.log(typeof arr) //object
+
+        //typeof不能判断是不是数组, 要用Array.isArray()
+
+        console.log(Array.isArray(arr));//true
+
+        console.log(Array.isArray(num));//false
+
+
+    </script>
+    
+</body>
+</html>

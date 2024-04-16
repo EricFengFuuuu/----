@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的遍历</title>
+</head>
+<body>
+    
+    <script>
+        var user = ["张三", "李四", "王五"];
+
+        //for循环
+        for (let i = 0; i < user.length; i++) {
+            console.log(user[i]);
+        
+        }
+
+        //while循环
+        var i = 0
+        while(i<user.length){
+            console.log(user[i]);
+            i ++;
+        }
+
+        //for in
+        for(a in user){
+            console.log(user[a]);
+        }
+
+        //forEach
+        user.forEach(element => {
+            console.log(element);
+        });
+
+        //for of
+        for (const iterator of user) {
+            console.log(iterator);
+        }
+
+
+
+      
+
+    </script>
+</body>
+</html>

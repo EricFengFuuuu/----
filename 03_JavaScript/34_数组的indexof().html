@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的indexof()</title>
+</head>
+<body>
+    <script>
+
+        //indexOf() 查找某个元素在数组中的位置
+
+        var arr = [10,20,30,30];
+
+        console.log(arr.indexOf(20));//1
+        console.log(arr.indexOf(30));//2
+        console.log(arr.indexOf(40));//-1
+
+        //从指定的位置往后搜索
+        console.log(arr.indexOf(20,2));//-1
+
+    </script>
+</body>
+</html>
