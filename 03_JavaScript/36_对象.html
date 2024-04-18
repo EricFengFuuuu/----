@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        //创建对象
+        var user = {
+            name:"张三",
+            age:20,
+            jobs:["前端工程师","后端工程师"],
+            flag:false,
+
+            getNmae:function(){
+                return this.name;
+            },
+
+            container:{
+                frontEnd:"web前端",
+                backEnd:["java", "php"],
+            }
+
+        };
+
+        //获取对象的属性
+        console.log(user.name);
+        console.log(user.age);
+
+        for (let i = 0; i < user.jobs.length; i++) {
+            const job = user.jobs[i];
+            console.log(job);
+        }
+
+        user.jobs.forEach(function(item){
+            console.log(item);
+        });
+
+        //对象调用方法
+        console.log(user.getNmae()); 
+
+        //链式调用
+        console.log(user.container.frontEnd);
+    </script>
+</body>
+</html>

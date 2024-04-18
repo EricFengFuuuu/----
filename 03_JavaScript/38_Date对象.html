@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date对象</title>
+</head>
+<body>
+
+    <script>
+        //获取当前时间(距离1970年1月1日的毫秒数)
+        var date = new Date();
+
+        //获取指定时间的毫秒数
+        console.log(date.getTime());
+
+        //时间戳实例化成Date对象
+        var date2 = new Date(1713361808714);
+        console.log(date2);
+
+        //获取年月日
+        console.log(date2.getFullYear());
+        //获取月
+        console.log(date2.getMonth()+1);
+        //获取日
+        console.log(date2.getDate());
+
+        //获取小时
+        console.log(date2.getHours());
+        //获取分钟
+        console.log(date2.getMinutes());
+        //获取秒
+        console.log(date2.getSeconds()); 
+
+        //获取星期
+        console.log(date2.getDay());
+
+        //日期格式化
+        console.log(date2.toISOString());//2024-04-17T13:50:08.714Z
+        console.log(date2.toLocaleString());//2024/4/17 21:40:02
+        console.log(date2.toLocaleDateString());//2024/4/17 
+        console.log(date2.toLocaleTimeString());//21:40:02
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element获取元素位置</title>
+
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 10px solid blue;
+            padding: 10px;
+            margin: 100px;
+        }
+
+        h3{
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="box">
+        21<br/>
+        21<br/>
+        21<br/>
+        21<br/>
+        21<br/>
+        21<br/>
+        21<br/>
+        21<br/>
+    </div>
+
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+
+    <script>
+
+        // 视口的高度
+        console.log(document.documentElement.clientHeight);
+        // 页面高度
+        console.log(document.body.clientHeight);
+
+        var box =  document.getElementById("box")
+
+        // 获取元素高度 宽度 包括padding
+        console.log(box.clientHeight);
+        console.log(box.clientWidth);
+
+        // 获取元素高度 宽度 包括padding (包含溢出不可见部分)
+        console.log(box.scrollHeight);
+        console.log(box.scrollWidth);
+
+
+        //获取元素高度 宽度 包括padding border 除了外边距
+        console.log(box.offsetHeight);
+        console.log(box.offsetWidth);
+
+
+        // 获取元素相对于定位父级元素的边界的距离(父级无定位则相当于顶层文档)
+        console.log(box.offsetLeft);
+        console.log(box.offsetTop);
+
+        // 获取 水平 垂直 滚动的距离
+        console.log(document.documentElement.scrollLeft);
+        console.log(document.documentElement.scrollTop);
+
+       
+
+
+    </script>
+
+</body>
+</html>

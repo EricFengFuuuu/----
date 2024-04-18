@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element操作属性</title>
+</head>
+<body>
+
+    <div class="box" id="root" ></div>
+    <div class="box" id="root2" ></div>
+
+    <script>
+
+        // 获取元素
+        var root = document.getElementById("root");
+        var root2 = document.getElementById("root2");
+        console.log(root.id);
+
+        //修改id
+        root.id = "root11";
+
+
+        console.log(root.className);
+
+        //修改class
+        root.className = "box11";
+        root.className = "box11 box12";
+
+
+        //Element.classList
+        //添加 移除 class
+        root.classList.add("box11");
+
+        root.classList.remove("box12");
+
+        //判断有没有 返回 ture false
+        console.log(root.classList.contains("box11")); 
+
+        //判断有没有 返回 ture false 有就移除, 没有就添加
+        console.log(root.classList.toggle("box11"));
+
+
+        // 修改innerHTML (可以识别标签)
+        root.innerHTML = '摔死了</br>uwiq';
+        // 修改innerText (只能识别纯文本)
+        root2.innerText = '摔死了</br>uwiq';
+
+
+        console.log(root);
+
+
+    </script>
+    
+</body>
+</html>

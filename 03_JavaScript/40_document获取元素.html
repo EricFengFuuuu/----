@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document获取元素</title>
+</head>
+<body>
+
+    <div>hello</div>
+    <div>hello2</div>
+
+    <p class="text">你好</p>
+    <p class="text">你好2</p>
+
+    <form name="login" action="">
+    </form>
+
+    <div id="111"> 哈哈哈</div>
+
+    <script>
+
+
+        // 通过标签名获取元素
+        var divs = document.getElementsByTagName("div");
+        console.log(divs);
+        console.log(divs[0]);
+        console.log(divs[1]);
+        console.log(divs[1].innerHTML);
+
+        // 通过类名获取元素
+        var texts = document.getElementsByClassName("text");
+        console.log(texts);
+        console.log(texts[0]);
+        console.log(texts[1]);
+
+        //改变text内容
+        texts[0].innerHTML = "你好 js";
+
+        //通过name获取元素
+        var login = document.getElementsByName("login");
+
+        //通过id获取元素
+        var div = document.getElementById("111");
+        
+        //改变text内容
+        div.innerHTML = "你好 js";
+
+        //使用选择器获取元素(第一个)
+        var text = document.querySelector(".text");
+        //使用选择器获取元素(所有)
+        var texts = document.querySelectorAll(".text");
+
+    </script>
+    
+</body>
+</html>

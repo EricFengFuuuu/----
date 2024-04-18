@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math对象</title>
+</head>
+<body>
+
+    <script>
+
+        //Math对象
+        var num = -100;
+        console.log(num); //-100
+        
+        //取绝对值
+        console.log(Math.abs(num)); //100
+
+        //取最大值
+        console.log(Math.max(10,20,30,40));//40
+
+        //取最小值
+        console.log(Math.min(10,20,30));//10
+
+        //向下取整
+        console.log(Math.floor(10.5));//10
+        console.log(Math.floor(10.2));//10
+
+
+        //向上取整
+        console.log(Math.ceil(10.5));//11
+        console.log(Math.ceil(10.2));//11
+
+        //随机数 大于等于0 小于1
+        console.log(Math.random());
+
+
+
+        //生成一个[min,max]的随机数整数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        console.log(getRandom(12,14));
+
+    </script>
+    
+</body>
+</html>
