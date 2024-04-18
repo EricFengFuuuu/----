@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS操作</title>
+</head>
+<body>
+
+    <div id="box" class="box">
+    </div>
+
+    <script>
+
+        var box = document.getElementById("box");
+        //设置元素的样式
+        //方式1
+        box.setAttribute("style", "width:200px; height:200px; background-color:yellow;")
+
+
+        //方式2
+        box.style.width = "200px";
+        box.style.height = "200px";
+        box.style.backgroundColor = "red";
+
+        //方式3
+
+        box.style.cssText = "width:200px; height:200px; background-color:blue;";
+</script>
+    
+</body>
+</html>

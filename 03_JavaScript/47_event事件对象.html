@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event事件对象</title>
+
+    <style>
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="btn">按钮</button>
+
+    <a id="baidu" href="https:www.baidu.com">百度</a>
+
+
+    <div id="box1" class="box1">
+        <div id="box2" class="box2"></div>
+    </div>
+
+    <script>
+
+        var but = document.getElementById('btn');
+        but.onclick = function (event) {
+            console.log(event);
+            //事件的目标对象
+            console.log(event.target);
+
+            //事件类型
+            console.log(event.type);
+
+        }
+
+        var baidu = document.getElementById('baidu');
+        baidu.onclick = function (event) {
+           
+            //阻止默认事件
+            event.preventDefault();
+            console.log("点击百度");
+
+
+        }
+
+        var box1 = document.getElementById('box1');
+        box1.onclick = function (event) {
+            console.log("box1");
+        }
+        
+        var box2 = document.getElementById('box2');
+        box2.onclick = function (event) {
+            console.log("box2");
+            //阻止冒泡
+            event.stopPropagation();
+        }
+
+    </script>
+    
+</body>
+</html>

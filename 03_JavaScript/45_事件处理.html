@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件处理</title>
+</head>
+<body>
+   
+    
+    <button onclick="clickf()">按钮1</button>
+    
+    <button id="btn">按钮2</button>
+
+    <button id="btn2">按钮3</button>
+
+    <script>
+
+        function clickf(){
+            console.log("按钮被点击了");
+        }
+
+        function clickf2(){
+            console.log("按钮被点击了2");
+        }
+
+        //只能添加一个 后续的会覆盖之前的
+        document.getElementById("btn").onclick = clickf;
+
+        //可添加多个事件
+        document.getElementById("btn2").addEventListener("click",  clickf);
+        document.getElementById("btn2").addEventListener("click",  clickf2);
+    </script>
+    
+    
+</body>
+</html>
