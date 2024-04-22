@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器-setInterval</title>
+
+    <style>
+
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <script>
+
+        //setInterval()方法可以在指定的时间间隔内不断地调用函数
+        var timer = setInterval(function(){
+            console.log("每秒打印一次");
+        },1000);
+
+
+
+        var box = document.getElementById("box");
+        var opacity = 1;
+
+        var fade = setInterval(function(){
+
+            if(opacity > 0){
+                opacity -= 0.05;
+                box.style.opacity = opacity;
+            
+            }else{
+                clearInterval(fade);  
+            }
+
+            },60);
+
+    
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

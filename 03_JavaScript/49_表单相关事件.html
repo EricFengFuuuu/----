@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单相关事件</title>
+</head>
+<body>
+
+    <input type="text" id="username">
+    <input type="text" id="password">
+
+
+    <!-- 表单 -->
+    <form id="myform"  onsubmit="submitForm()">
+
+        <input type="text" name="aaa">
+
+        <button  id="reset" onclick="resetForm()">重置</button>
+        <button  id="submit">提交</button>
+    </form>
+
+    <script>
+
+
+
+        var myform = document.getElementById("myform");
+
+        var reset = document.getElementById("reset");
+        var submit = document.getElementById("submit");
+
+
+
+        // reset.onclick = function(){
+        //     //清空表单
+        //     myform.reset();
+        //     console.log("清空表单");
+        // }
+
+        // submit.onclick = function(){
+        //     //提交表单
+        //     myform.submit();
+        //     console.log("提交表单");
+        // }
+
+        function resetForm(){
+            console.log("清空表单2");
+        }
+
+        function submitForm(){
+            console.log("提交表单2");
+        }
+
+
+
+
+
+
+
+
+
+        var username = document.getElementById("username");
+
+        //input事件(表单内容改变时触发)
+        username.oninput = function(e){
+            console.log("输入了" + e.target.value);
+        }
+
+         //select事件(选中内容时触发)
+         var password = document.getElementById("password");
+        password.onselect = function(e){
+            console.log("选择了" + e.target.value);
+        }
+
+        //change事件(失去焦点或回车时触发)
+        password.onchange = function(e){
+            console.log("改变了" + e.target.value);
+        }
+
+
+
+
+       
+
+
+
+
+    </script>
+    
+</body>
+</html>
