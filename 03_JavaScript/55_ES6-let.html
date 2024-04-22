@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let</title>
+</head>
+<body>
+
+    <script>
+
+        // var 函数级作用域
+        if(true){
+            var i = 10;
+        }
+        //可以正常打印
+        console.log(i);
+
+        function fn(){
+            //只在函数内能使用
+            var j = 10;
+        }
+        //打印报错
+        // console.log(j);
+
+
+
+        // let 块级作用域
+
+        {
+            var f = 20;
+            let a = 15;//只在该代码块内能使用
+        }
+
+        //正常输出
+        console.log(f);
+        
+        //打印报错
+        // console.log(a);
+
+
+
+        var a = [];
+        for (var i = 0; i < 10; i++) {
+            a[i] = function(){
+                console.log(i);
+            }
+            
+        }
+        console.log(a);
+
+        //所有的都会输出10
+        a[0]();//10
+        a[1]();//10
+
+
+        var b = [];
+        for (let i = 0; i < 10; i++) {
+            b[i] = function(){
+                console.log(i);
+            }
+            
+        }
+        console.log(b);
+        b[0]();//0
+        b[5]();//5
+
+        //let 不存在变量提升
+
+        console.log(c);//undefined
+        var c =10;
+
+        // console.log(d);//会报错
+        // let d = 10;
+
+        //let 不允许重复声明
+        var e = 10;
+        var e = 10;
+
+        let d = 10;
+        // let d = 10;
+
+    </script>
+    
+</body>
+</html>
