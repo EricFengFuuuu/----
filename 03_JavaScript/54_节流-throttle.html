@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流-throttle</title>
+
+    <style>
+        h3{
+            height: 400px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+
+    <script>
+          function showTop(){
+            var scrollTop = document.documentElement.scrollTop;
+            console.log("滚动条位置" + scrollTop);
+        }
+
+        // 节流
+        function throttle(fn, delay){
+            var valid = true;
+            return function(){
+                if(!valid){
+                    return ;
+                }
+                valid = false;
+                setTimeout(function(){ 
+                    fn();
+                    valid = true;
+                }, delay);
+            }
+        }
+
+        //滚动事件
+        window.onscroll = throttle(showTop,2000);
+    </script>
+    
+</body>
+</html>

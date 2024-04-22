@@ -4,12 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>防抖-debounce</title>
+
+    <style>
+        h3{
+            height: 400px;
+        }
+    </style>
+
 </head>
 <body>
 
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+    <h3>标题</h3>
+
     <script>
 
-        
+      
+
+
+        function showTop(){
+            var scrollTop = document.documentElement.scrollTop;
+            console.log("滚动条位置" + scrollTop);
+        }
+
+        // 防抖
+        function debounce(fn, delay) {
+            var timer= null;
+            return function(){
+                if(timer){
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(fn, delay);
+            }
+            // let timeout = null;
+            // return function () {
+            //     let context = this;
+            //     let args = arguments;
+            //     if (timeout) clearTimeout(timeout);
+            //     let callNow = !timeout;
+            //     timeout = setTimeout(() => {
+            //         timeout = null;
+            //     }, delay);
+            //     if (callNow) fn.apply(context, args);
+            // };
+        }
+
+        //滚动事件
+     
+
+        window.onscroll = debounce(showTop,400);
+
     </script>
     
 </body>
