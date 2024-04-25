@@ -18,6 +18,13 @@ else if (-1 != $request.url.indexOf("bicycle/api/function/getFuncList")) {
         $done({body: JSON.stringify(obj)});
     }
 }
+else if (-1 != $request.url.indexOf("bicycle/api/trafficPackage/getTrafficOverviewExpiredDate")) {
+    if ( obj.errcode == 0 && obj.data){
+        obj.data.expirationDate = 1743091199000;
+        obj.data.status = 1;
+        $done({body: JSON.stringify(obj)});
+    }
+}
 else {
     $done({});
 } ;
