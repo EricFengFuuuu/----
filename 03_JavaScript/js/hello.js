@@ -1,6 +1,7 @@
 // var age = 30;
 // console.log(age);
 
+//v1.0
 
 var obj = JSON.parse($response.body);
 if (-1 != $request.url.indexOf("bicycle/v1/vehicle/dynamicInfo")) {
