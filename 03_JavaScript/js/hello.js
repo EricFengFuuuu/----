@@ -3,9 +3,6 @@
 
 //v1.0
 
-console.log($request.url);
-console.log($request.body);
-
 var obj = JSON.parse($response.body);
 if (-1 != $request.url.indexOf("bicycle/v1/vehicle/dynamicInfo")) {
     if ( obj.errcode == 0 && obj.data){
