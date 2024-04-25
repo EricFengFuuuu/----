@@ -12,8 +12,8 @@ if (-1 != $request.url.indexOf("bicycle/v1/vehicle/dynamicInfo")) {
 }
 else if (-1 != $request.url.indexOf("bicycle/api/function/getFuncList")) {
     if ( obj.errcode == 0 && obj.data){
-        obj.data.showBackupBatterySoc.support = 1;
-        obj.data.resetVehicle.support = 1;
+        obj.data.showBackupBatterySoc.support = 0;
+        obj.data.resetVehicle.support = 0;
         $done({body: JSON.stringify(obj)});
     }
 }
