@@ -1,5 +1,5 @@
 //v1.0
-//猛犸电动App智能服务破解
+//不背单词App
 
 var obj = JSON.parse($response.body);
 if (-1 != $request.url.indexOf("bicycle/v1/vehicle/dynamicInfo")) {
