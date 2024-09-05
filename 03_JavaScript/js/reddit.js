@@ -9,7 +9,7 @@ console.log("statusCode："+ statusCode);
 
 
  if (-1 != requestUrl.indexOf("https://gql-fed.reddit.com/")) {
-    if ( statusCode == 200 && obj.obj.data.homeV3){
+    if ( statusCode == 200 && obj.data.homeV3){
 
         console.log("length:" + obj.data.homeV3.elements.edges.length);
         console.log("edges:" + JSON.stringify(obj.data.homeV3.elements.edges));
