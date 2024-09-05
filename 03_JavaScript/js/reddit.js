@@ -12,15 +12,15 @@ console.log("statusCode："+ statusCode);
     if ( statusCode == 200 && obj.data.homeV3){
 
         console.log("length:" + obj.data.homeV3.elements.edges.length);
-        console.log("edges:" + JSON.stringify(obj.data.homeV3.elements.edges));
-
         if(obj.data.homeV3.elements.edges.length > 0){
             obj.data.homeV3.elements.edges.forEach(function (item) {
-                if (item.node.adPayload != null) {
+                if (item.node.adPayload) {
                     item.node.adPayload = null;
-                    
                 }
+
+                console.log("adPayload:" + JSON.stringify(item.node.adPayload));
             });
+            
         }
 
         $done({body: JSON.stringify(obj)});
