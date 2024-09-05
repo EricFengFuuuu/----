@@ -16,7 +16,6 @@ console.log("statusCode："+ statusCode);
             obj.data.homeV3.elements.edges.forEach(function (item) {
                 if(item.node.adPayload != null){
                     item.node.adPayload.isBlankAd = true;
-                    console.log("adPayload1:" + JSON.stringify(item.node.adPayload));
                 }
             });
             
