@@ -7,7 +7,7 @@ var obj = JSON.parse($response.body);
 
 console.log("statusCode："+ statusCode);
 
-if ( statusCode == 200 && obj.data.*V3){
+if ( statusCode == 200 && obj.data.*){
 
     console.log("length:" + obj.data.*.elements.edges.length);
     if(obj.data.*.elements.edges.length > 0){
