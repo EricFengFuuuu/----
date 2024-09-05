@@ -9,9 +9,9 @@ console.log("statusCode："+ statusCode);
 
 if ( statusCode == 200 && obj.data.*V3){
 
-    console.log("length:" + obj.data.*V3.elements.edges.length);
-    if(obj.data.*V3.elements.edges.length > 0){
-        obj.data.*V3.elements.edges.forEach(function (item) {
+    console.log("length:" + obj.data.*.elements.edges.length);
+    if(obj.data.*.elements.edges.length > 0){
+        obj.data.*.elements.edges.forEach(function (item) {
             if(item.node.adPayload != null){
                 item.node.adPayload.isBlankAd = true;
             }
