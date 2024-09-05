@@ -6,24 +6,17 @@ var statusCode = $response.statusCode;
 var obj = JSON.parse($response.body);
 
 console.log("statusCode："+ statusCode);
+if ( statusCode == 200 && obj.data.homeV3){
 
-
-if (-1 != requestUrl.indexOf("https://gql-fed.reddit.com/")) {
-    if ( statusCode == 200 && obj.data.homeV3){
-
-        console.log("length:" + obj.data.homeV3.elements.edges.length);
-        if(obj.data.homeV3.elements.edges.length > 0){
-            obj.data.homeV3.elements.edges.forEach(function (item) {
-                if(item.node.adPayload != null){
-                    item.node.adPayload.isBlankAd = true;
-                }
-            });
-            
-        }
-
-        $done({body: JSON.stringify(obj)});
+    console.log("length:" + obj.data.homeV3.elements.edges.length);
+    if(obj.data.homeV3.elements.edges.length > 0){
+        obj.data.homeV3.elements.edges.forEach(function (item) {
+            if(item.node.adPayload != null){
+                item.node.adPayload.isBlankAd = true;
+            }
+        });
+        
     }
+  
 }
-else {
-    $done({body: JSON.stringify(obj)});
-} ;
+$done({body: JSON.stringify(obj)});
