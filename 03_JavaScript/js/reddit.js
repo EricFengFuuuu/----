@@ -14,9 +14,10 @@ console.log("statusCode："+ statusCode);
         console.log("length:" + obj.data.homeV3.elements.edges.length);
         if(obj.data.homeV3.elements.edges.length > 0){
             obj.data.homeV3.elements.edges.forEach(function (item) {
-                console.log("adPayload1:" + JSON.stringify(item.node.adPayload));
-                item.node.adPayload = null;
-                console.log("adPayload2:" + JSON.stringify(item.node.adPayload));
+                if(item.node.adPayload != null){
+                    item.node.adPayload.isBlankAd = true;
+                    console.log("adPayload1:" + JSON.stringify(item.node.adPayload));
+                }
             });
             
         }
