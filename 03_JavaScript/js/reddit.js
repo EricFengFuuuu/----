@@ -6,7 +6,7 @@ var statusCode = $response.statusCode;
 var obj = JSON.parse($response.body);
 
 console.log("statusCode："+ statusCode);
-console.log("data:" + obj.data);
+console.log("data:" + JSON.stringify(obj.data.homeV3));
 
  if (-1 != requestUrl.indexOf("https://gql-fed.reddit.com/")) {
     if ( statusCode == 200 && obj.data){
