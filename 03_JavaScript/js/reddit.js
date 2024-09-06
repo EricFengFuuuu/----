@@ -22,6 +22,23 @@ if ( statusCode == 200 && obj.data.all){
   
 }
 
+
+if ( statusCode == 200 && obj.data.home){
+
+    console.log("length:" + obj.data.home.elements.edges.length);
+    if(obj.data.home.elements.edges.length > 0){
+        obj.data.home.elements.edges.forEach(function (item) {
+            if(item.node.adEvents || item.node.__typename == "AdPost"){
+                item.node.isBlank = true;
+            }
+        });
+        
+    }
+  
+}
+
+
+
 if ( statusCode == 200 && obj.data.subredditV3){
 
     console.log("length:" + obj.data.subredditV3.elements.edges.length);
