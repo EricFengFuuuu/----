@@ -8,6 +8,21 @@ var obj = JSON.parse($response.body);
 console.log("statusCode："+ statusCode);
 
 
+
+
+if ( statusCode == 200 && obj.data.children){
+    console.log("length:" + obj.data.children.commentsPageAds.length);
+
+    if(obj.data.children.commentsPageAds.length > 0){
+        obj.data.children.commentsPageAds.forEach(function (item) {
+            if(item.adEvents || item.__typename == "AdPost"){
+                item.isBlank = true;
+            }
+        });
+    }
+}
+
+
 if ( statusCode == 200 && obj.data.all){
     console.log("length:" + obj.data.all.posts.edges.length);
 
