@@ -10,11 +10,11 @@ console.log("statusCode："+ statusCode);
 
 if ( statusCode == 200 && obj.data.all){
 
-    console.log("length:" + obj.data.all.elements.edges.length);
-    if(obj.data.all.elements.edges.length > 0){
-        obj.data.all.elements.edges.forEach(function (item) {
-            if(item.node.adSupplementaryTextRichtext){
-                item.node.isHidden = true;
+    console.log("length:" + obj.data.all.posts.edges.length);
+    if(obj.data.all.posts.edges.length > 0){
+        obj.data.all.posts.edges.forEach(function (item) {
+            if(item.node.adEvents || item.node.__typename == "AdPost"){
+                item.node.isBlank = true;
             }
         });
         
