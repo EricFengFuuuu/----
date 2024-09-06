@@ -7,6 +7,21 @@ var obj = JSON.parse($response.body);
 
 console.log("statusCode："+ statusCode);
 
+
+if ( statusCode == 200 && obj.data.all){
+
+    console.log("length:" + obj.data.all.elements.edges.length);
+    if(obj.data.all.elements.edges.length > 0){
+        obj.data.all.elements.edges.forEach(function (item) {
+            if(item.node.adSupplementaryTextRichtext){
+                item.node.isHidden = true;
+            }
+        });
+        
+    }
+  
+}
+
 if ( statusCode == 200 && obj.data.subredditV3){
 
     console.log("length:" + obj.data.subredditV3.elements.edges.length);
