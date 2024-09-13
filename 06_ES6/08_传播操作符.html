@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传播操作符</title>
+</head>
+<body>
+    <script>
+
+        var person  = {
+            name:"张三",
+            job:"法外狂徒",
+            age:20,
+            go:function(){
+                console.log("去上班");
+            }
+        };
+
+        //解构的同时把剩下的对象赋值给person2
+        var {name,job,...person2} = person;
+        console.log(name);
+        console.log(job);
+
+        console.log(person2);
+        console.log(person2.name);
+        console.log(person2.job);
+        console.log(person2.age);
+        console.log(person2.go());
+
+
+        
+
+    </script>
+</body>
+</html>

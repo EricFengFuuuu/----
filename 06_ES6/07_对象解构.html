@@ -8,7 +8,35 @@
 <body>
 
     <script>
-        
+       
+        var name = '张三';
+        var job = "法外狂徒"
+
+        let person2 = {
+            name,
+            job,
+            go(){
+                console.log("去上班");
+            }
+        }
+
+        //通过.方法获取对象属性
+        console.log(person2.name);
+        console.log(person2.job);
+        person2.go();
+
+        //通过[]方法获取对象属性
+        console.log(person2["name"]);
+        console.log(person2["job"]);
+        person2["go"]();
+
+        //ES6对象解构-快速获取对象的属性和方法
+        var {name,job,go} = person2
+        console.log(name,job);
+        console.log(job);
+        go();
+
+
     </script>
     
 </body>

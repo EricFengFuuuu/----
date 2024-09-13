@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组map</title>
+</head>
+<body>
+
+    <script>
+
+        //对数组进行遍历
+        var arr = [1,2,3,4,5,6,7,8,9,10];
+        var arr2 = []
+        for (var i = 0; i < arr.length; i++) {
+            arr2.push(arr[i]*2);
+        }
+        console.log(arr2);
+
+        //map 循环
+        var arr3 = arr.map(function(item){
+            return item*2;
+        })
+        //箭头函数
+        var arr4 = arr.map(item=>item*2);
+        console.log(arr4);
+
+        //map处理对象数组
+        var users = [{name:"张三", age:10}, {name:"李四", age:20}, {name:"王五", age:30}];
+
+        var users2 =  users.map(function(item){
+            item.age = item.age+1
+
+            item.job = '学生';
+            return item;
+        })
+        console.log(users2);
+
+    </script>
+    
+</body>
+</html>

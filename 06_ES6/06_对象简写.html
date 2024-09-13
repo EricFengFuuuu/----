@@ -9,9 +9,36 @@
     
     <script>
 
-        var employee={
-             
+           //传统写法
+           let person = {
+            name: "张三",
+            job: "法外狂徒",
+            go:function(){
+                console.log('去上班');
+            }
         }
+
+        console.log(person.name);
+        console.log(person.job);
+        person.go();
+
+        //ES6 简写
+        //1,如果对象的key和变量的名字一样，可以只定义一次
+        //2,如果对象的value是一个函数，可以去掉:function
+        var name = '张三';
+        var job = "法外狂徒"
+
+        let person2 = {
+            name,
+            job,
+            go(){
+                console.log("去上班");
+            }
+        }
+        console.log(person2.name);
+        console.log(person2.job);
+        person2.go();
+
     </script>
 </body>
 </html>
