@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+<body>
+
+    <script>
+
+        //传统函数
+        function sum(a,b){
+            return a + b;
+        }
+
+        var sum = function(a,b){
+            return a + b;
+        }
+
+        //剪头函数 去掉function, ()后面加=>
+        var sum2 = (a,b) =>{
+            return a + b;
+        }
+        // 没有逻辑体， 再去掉{}
+        var sum3 = (a,b) => a+b;
+
+        //只有一个参数，()也能省掉
+        var arr = [1,2,3,4,5,6];
+        //1
+        var newarr = arr.map(function(item){
+            return item *2;
+        });
+        //2
+        var newarr = arr.map(item => item*2);
+    </script>
+    
+</body>
+</html>

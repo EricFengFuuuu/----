@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数默认参数</title>
+</head>
+<body>
+    <script>
+
+        //给函数参数赋默认值
+        function sum(a=0,b=0){
+            return a+b;
+        }
+
+
+        console.log(sum())//0
+        console.log(sum(100))//100
+        console.log(sum(100,100))/200
+    </script>
+</body>
+</html>
