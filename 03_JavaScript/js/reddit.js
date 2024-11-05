@@ -99,4 +99,13 @@ if ( statusCode == 200 && obj.data.newsV3){
     }
 }
 
+if ( statusCode == 200 && obj.data.postInfoById){
+    console.log("length:" + obj.data.postInfoById.commentsPageAds.length);
+
+    if(obj.data.postInfoById.commentsPageAds.length > 0){
+        obj.data.postInfoById.commentsPageAds = null;
+    }
+}
+
+
 $done({body: JSON.stringify(obj)});
